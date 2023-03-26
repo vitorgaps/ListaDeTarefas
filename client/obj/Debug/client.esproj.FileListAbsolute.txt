@@ -1,0 +1,2 @@
+C:\Users\vitor\Documents\GitHub\ListaDeTarefas\client\obj\Debug\client.esproj.SuggestedBindingRedirects.cache
+C:\Users\vitor\Documents\GitHub\ListaDeTarefas\client\obj\Debug\client.esproj.CoreCompileInputs.cache
