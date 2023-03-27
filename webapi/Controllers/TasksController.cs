@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using webapi.Services;
 using webapi.Models.Tasks;
+using Microsoft.AspNetCore.Cors;
 
 namespace webapi.Controllers
 {
@@ -14,11 +15,11 @@ namespace webapi.Controllers
             _taskService = taskService;
         }
 
+        [DisableCors]
         [HttpGet]
         public IActionResult GetAllTasks()
         {
             var tasks = _taskService.GetAllTasks();
-            Console.WriteLine(tasks);
             return Ok(tasks);
         }
 
