@@ -19,18 +19,18 @@ public class DataContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Tarefa>()
-            .Property(m=>m.Id)
+        modelBuilder.Entity<Entities.Task>()
+            .Property(m => m.id)
             .ValueGeneratedOnAdd();
-        modelBuilder.Entity<Tarefa>()
-            .Property(m => m.NomeTarefa).IsRequired();
-        modelBuilder.Entity<Tarefa>()
-            .Property(m => m.DataInicio).IsRequired();
-        modelBuilder.Entity<Tarefa>()
-            .Property(m => m.Terminado).IsRequired();
+        modelBuilder.Entity<Entities.Task>()
+            .Property(m => m.taskName).IsRequired();
+        modelBuilder.Entity<Entities.Task>()
+            .Property(m => m.startDate).IsRequired();
+        modelBuilder.Entity<Entities.Task>()
+            .Property(m => m.finished).IsRequired();
             
         base.OnModelCreating(modelBuilder);
     }
 
-    public DbSet<Tarefa> Tarefas { get; set; }
+    public DbSet<Entities.Task> Tasks { get; set; }
 }
